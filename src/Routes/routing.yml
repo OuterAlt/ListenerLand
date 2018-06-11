@@ -1,0 +1,7 @@
+listenerland_index:
+    path: /
+    controller: App\Controller\HomeController::indexAction
+
+listenerland_login:
+    path: /login
+    controller:
