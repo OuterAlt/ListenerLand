@@ -1,4 +1,4 @@
 listenerland_routes:
-    resource: "../src/Routes/routing.yml"
-    prefix: /
-    trailing_slash_on_root: false
+    resource: "../src/Routes/"
+    type: directory
+

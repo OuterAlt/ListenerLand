@@ -4,4 +4,7 @@ listenerland_index:
 
 listenerland_login:
     path: /login
-    controller:
+    controller: App\Controller\SecurityController:loginAction
+
+listenerland_login_check:
+    path: /login-check

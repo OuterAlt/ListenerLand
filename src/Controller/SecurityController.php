@@ -8,6 +8,8 @@
  */
 
 namespace App\Controller;
+
+use App\Forms\Type\AuthenticationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
@@ -17,10 +19,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class SecurityController extends Controller
 {
     /**
-     *
+     * Login function to access the secured area.
      */
     public function loginAction()
     {
-        dump('Page de login'); die;
+        $authenticationUtils = $this->get('security.authentication_utils');
+
+        $lastError = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
+
+        $authenticationForm = $this->createForm(
+            AuthenticationType::class,
+            [],
+            array(
+                'lastUsername' => $lastUsername
+            )
+        );
+
+        return $this->render(
+            'pages/Security/login.html.twig',
+            array(
+                'lastError' => $lastError,
+                'lastUsername' => $lastUsername,
+                'authenticationForm' => $authenticationForm->createView()
+            )
+        );
     }
 }

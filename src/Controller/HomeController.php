@@ -17,9 +17,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class HomeController extends Controller
 {
     /**
-     *
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function indexAction()
+    {
+        return $this->render('pages/index.html.twig');
+    }
+
+
+    public function secondPage()
     {
         dump('bonjour'); die;
     }

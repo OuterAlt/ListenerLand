@@ -80,6 +80,15 @@
     "psr/simple-cache": {
         "version": "1.0.1"
     },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "c82bead70f9a4f656354a193df7bf0ca2114efa0"
+        }
+    },
     "symfony/cache": {
         "version": "v4.1.0"
     },
@@ -125,6 +134,9 @@
             "ref": "e921bdbfe20cdefa3b82f379d1cd36df1bc8d115"
         }
     },
+    "symfony/form": {
+        "version": "v4.1.0"
+    },
     "symfony/framework-bundle": {
         "version": "3.3",
         "recipe": {
@@ -143,6 +155,9 @@
     "symfony/inflector": {
         "version": "v4.1.0"
     },
+    "symfony/intl": {
+        "version": "v4.1.0"
+    },
     "symfony/lts": {
         "version": "4-dev"
     },
@@ -155,8 +170,14 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+    "symfony/options-resolver": {
+        "version": "v4.1.0"
+    },
     "symfony/orm-pack": {
         "version": "v1.0.5"
+    },
+    "symfony/polyfill-intl-icu": {
+        "version": "v1.8.0"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.8.0"

@@ -1,0 +1,15 @@
+{% extends 'layout/login_form_layout.html.twig' %}
+
+{% block body %}
+    <h1>Connexion</h1>
+
+    {{ form_start(authenticationForm) }}
+        {{ form_label(authenticationForm.username) }}
+        {{ form_widget(authenticationForm.username) }}
+
+        {{ form_label(authenticationForm.password) }}
+        {{ form_widget(authenticationForm.password) }}
+
+        <button type="submit">Se connecter !</button>
+    {{ form_end(authenticationForm) }}
+{% endblock %}
